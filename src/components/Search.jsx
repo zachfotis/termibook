@@ -42,7 +42,7 @@ function Search() {
       currentPageRequested: 1,
     });
     try {
-      const response = await fetch(`http://localhost:5000/query?${params}`);
+      const response = await fetch(`/query?${params}`);
       const data = await response.json();
       if (data?.results && data?.info) {
         setResults(data.results);
